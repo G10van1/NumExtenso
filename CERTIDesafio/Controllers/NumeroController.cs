@@ -19,8 +19,14 @@ namespace CERTIDesafio.Controllers
         }
 
         [HttpGet]
-
         [Route("{number:int}")]
+        //**********************************************************************************
+        // Comando HTTP GET
+        // Recebe número entre -99999 e 99999 e formata para um string por extenso
+        // Parâmetros:  int number
+        //              Número decimal inteiro entre -99999 e 99999
+        // Retorna: Json contendo o valor por extenso do número
+        //**********************************************************************************
         public Numero Get(int number)
         {
             return (new Numero(number));
@@ -28,7 +34,15 @@ namespace CERTIDesafio.Controllers
 
         [HttpGet]
         [Route("-Autoteste")]
-        public string Get()
+        //**********************************************************************************
+        // Comando HTTP GET
+        // Teste unitário para validar todos os números do intervalo -99999 a 99999
+        // Parâmetros:  
+        // Retorna: string
+        //          Um string contendo o valor numérico e por extenso de todos os números
+        //          do intervalo -99999 a 99999 em ordem crescente
+        //**********************************************************************************
+        public string GetAllNumbers()
         {
             string str = "";
             for (int i = -99999; i <= 99999; i++)

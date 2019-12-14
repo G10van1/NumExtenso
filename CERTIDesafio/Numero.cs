@@ -5,30 +5,37 @@ namespace CERTIDesafio
 {
     public class Numero
     {
+        // Propiedade que recebe o valor por extenso
         public string Extenso { get; set;}
 
+        //**********************************************************************************
         // Construtor
+        // Parâmetros:  int NumeroDecimal
+        //              Número inteiro entre -99999 e 99999 que será escrito por extenso
+        //**********************************************************************************
         public Numero(int NumeroDecimal) => FormatarExtenso(NumeroDecimal);
 
+        //**********************************************************************************
+        // Formatação de um número decimal inteiro por extenso
+        // Parâmetros:  int Decimal
+        //              Número inteiro entre -99999 e 99999 que será escrito por extenso
+        //**********************************************************************************
         private void FormatarExtenso(int Decimal)
         {
             Extenso = "";
-            // Vetores de números básicos por extenso
+            // Vetor de números básicos (0 a 19) por extenso 
             var NumerosBasicos = new List<string>() {"zero", "um", "dois", "três", "quatro", "cinco",
                 "seis", "sete", "oito", "nove", "dez", "onze", "doze", "treze", "quatorze", "quinze",
                 "dezesseis", "dezessete", "dezoito", "dezenove"};
-
+            // Vetor de dezenas (0 a 90) por extenso 
             var Dezenas = new List<string>() {"zero", "dez", "vinte", "trinta", "quarenta", "cinquenta",
                 "sessenta", "setenta", "oitenta", "noventa"};
-
+            
+            // Vetor de centenas (0 a 900) por extenso 
             var cem = (Decimal % 100) == 0 ? "cem" : "cento";
             var Centenas = new List<string>() {"zero", cem, "duzentos", "trezentos", "quatrocentos", "quinhentos",
                 "seiscentos", "setecentos", "oitocentos", "novecentos"};
 
-            //**************************
-            // Formatação por extenso
-            //**************************
-            
             // Caso seja zero
             if (Decimal == 0)
             {
@@ -54,7 +61,7 @@ namespace CERTIDesafio
             int centena = (Decimal % 1000)/100;
             int dezena = (Decimal % 100) / 10;
             int unidade = (Decimal % 10);
-            unidade += dezena == 1 ? 10 : 0;// números de 10 a 19
+            unidade += dezena == 1 ? 10 : 0;// incluir números de 10 a 19 se for o caso
 
             // Formatar milhar
             if (milhar >= 20)// Acima de 19999

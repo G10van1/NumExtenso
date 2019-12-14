@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "Numero/-Autoteste",
+      "launchUrl": "Numero/77391",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
