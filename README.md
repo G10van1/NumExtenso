@@ -1,11 +1,12 @@
 # CERTIDesafio
 Este aplicativo é um HTTP Server do tipo WEB API.
 Transforma um número decimal inteiro em um string por extenso.
+O número deve estar no intervalo [-99999,99999].
 
 ## Ferramentas e Tecnologias Utilizadas
 
-- Visual Studio 2019
-- .NET Core e [ASP.NET Core](https://github.com/aspnet/AspNetCore.Docs)
+- Microsoft Visual Studio 2019 Community
+- .NET Core e [ASP.NET Core 3.1](https://github.com/aspnet/AspNetCore.Docs)
 - C#
 
 ## Descritivo funcional
