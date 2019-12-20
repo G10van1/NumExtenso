@@ -27,6 +27,7 @@ namespace CERTIDesafio
             var NumerosBasicos = new List<string>() {"zero", "um", "dois", "três", "quatro", "cinco",
                 "seis", "sete", "oito", "nove", "dez", "onze", "doze", "treze", "quatorze", "quinze",
                 "dezesseis", "dezessete", "dezoito", "dezenove"};
+
             // Vetor de dezenas (0 a 90) por extenso 
             var Dezenas = new List<string>() {"zero", "dez", "vinte", "trinta", "quarenta", "cinquenta",
                 "sessenta", "setenta", "oitenta", "noventa"};
@@ -44,7 +45,8 @@ namespace CERTIDesafio
             }
 
             // Caso esteja fora de intervalo válido
-            if (Decimal > 99999 || Decimal < -99999) {
+            if (Decimal > 99999 || Decimal < -99999) 
+            {
                 Extenso = "Erro: Número fora do limite permitido [-99999,99999]";
                 return;
             }
@@ -57,6 +59,7 @@ namespace CERTIDesafio
                 Decimal *= -1;
             }
 
+            // Calculo dos índices dos vetores
             int milhar = (Decimal / 1000);
             int centena = (Decimal % 1000)/100;
             int dezena = (Decimal % 100) / 10;
@@ -68,32 +71,32 @@ namespace CERTIDesafio
             {
                 Extenso += Dezenas[milhar / 10];
 
-                if (milhar % 10 != 0)
+                if (milhar % 10 != 0)//Dezena não terminada com 0, deve escrever a unidade
                     Extenso += " e " + NumerosBasicos[milhar % 10];
 
                 Extenso += " mil";
             }
             else
             {
-                if (milhar % 20 > 1)// Neste caso testa se não é um número abaixo de 2000
+                if (milhar % 20 > 1)// Se é um número acima de 1999
                     Extenso += NumerosBasicos[milhar] + " ";
 
-                if (milhar % 20 != 0)// Se não está abaixo de 1000
+                if (milhar % 20 != 0)// Se está acima de 999
                     Extenso += "mil";
             }
 
             // Formatar centena
-            if (centena > 0)// Se não está abaixo de 100
+            if (centena > 0)// Se está acima de 99
             {
-                if (Extenso != "" && Extenso != "menos ")
+                if (Extenso != "" && Extenso != "menos ")// Se já escreveu algum número, concatena o "e"
                     Extenso += " e ";
                 Extenso += Centenas[centena];
             }
 
             // Formatar dezena
-            if (dezena > 1)// Se não está abaixo de 20
+            if (dezena > 1)// Se está acima de 19
             {
-                if (Extenso != "" && Extenso != "menos ")
+                if (Extenso != "" && Extenso != "menos ")// Se já escreveu algum número, concatena o "e"
                     Extenso += " e ";
                 Extenso += Dezenas[dezena];
             }
@@ -101,7 +104,7 @@ namespace CERTIDesafio
             // Formatar unidade
             if (unidade > 0)// Se não é zero
             {
-                if(Extenso != "" && Extenso != "menos ")
+                if(Extenso != "" && Extenso != "menos ")// Se já escreveu algum número, concatena o "e"
                     Extenso += " e ";
                 Extenso += NumerosBasicos[unidade];
             }

@@ -10,10 +10,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-nanoserver-1903 AS build
 WORKDIR /src
-COPY ["CERTIDesafio/CERTIDesafio.csproj", "CERTIDesafio/"]
-RUN dotnet restore "CERTIDesafio/CERTIDesafio.csproj"
+COPY ["CERTIDesafio.csproj", ""]
+RUN dotnet restore "./CERTIDesafio.csproj"
 COPY . .
-WORKDIR "/src/CERTIDesafio"
+WORKDIR "/src/."
 RUN dotnet build "CERTIDesafio.csproj" -c Release -o /app/build
 
 FROM build AS publish
