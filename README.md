@@ -37,7 +37,7 @@ Para saber como executar um aplicativo ASP.NET Core em contêineres do Docker us
 
 [ASP.NET Core em contêineres do Docker](https://docs.microsoft.com/pt-br/aspnet/core/host-and-deploy/docker/building-net-docker-images?view=aspnetcore-3.1)
 
-Após rodar o aplicativo abra o navegador e digite o número IP do container, "/Numero/" e o número a ser escrito por extenso. Vide exemplo abaixo:
+Após rodar o aplicativo abra o navegador e digite o número IP do contêiner, "/Numero/" e o número a ser escrito por extenso. Vide exemplo abaixo:
 
 ```console
 http://172.21.7.1/Numero/78
