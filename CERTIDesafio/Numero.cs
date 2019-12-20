@@ -16,7 +16,8 @@ namespace CERTIDesafio
         public Numero(int NumeroDecimal) => FormatarExtenso(NumeroDecimal);
 
         //**********************************************************************************
-        // Formatação de um número decimal inteiro por extenso
+        // Formatação de um número decimal inteiro por extenso, armazena string formatado na
+        // Propriedade Extenso.
         // Parâmetros:  int Decimal
         //              Número inteiro entre -99999 e 99999 que será escrito por extenso
         //**********************************************************************************
@@ -108,7 +109,6 @@ namespace CERTIDesafio
                     Extenso += " e ";
                 Extenso += NumerosBasicos[unidade];
             }
-            return;
         }
     }
 }
