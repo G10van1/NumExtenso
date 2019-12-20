@@ -28,7 +28,7 @@ Clique no link abaixo para baixar a imagem do aplicativo para rodar no Docker:
 
 [Imagem Docker](https://1drv.ms/u/s!AqDuCVVT4S07k2cEinuqaL0ajV2H?e=vfHALq)
 
-Após baixar a imagem digite o comando abaixo para carregar a imagem na pasta /tmp ou altere para outro caminho.
+Após baixar a imagem digite o comando abaixo para carregar a imagem na pasta "tmp" ou altere para outro caminho.
 ```console
 docker load </tmp/certidesafioimg.tar
 ```
