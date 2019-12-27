@@ -20,7 +20,7 @@ Retorna:
 ```console
 {"extenso":"setenta e oito"}
 ```
-O servidor retorna um JSON contendo o valor por extenso do número passado
+O servidor retorna um texto no formato JSON contendo o valor por extenso do número passado
 
 ## Imagem Docker
 
