@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "Numero/77391",
+      "launchUrl": "77391",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +20,7 @@
     "CERTIDesafio": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "Numero/54321",
+      "launchUrl": "54321",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
@@ -29,7 +29,7 @@
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/Numero/54321",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/54321",
       "publishAllPorts": true,
       "useSSL": true
     }

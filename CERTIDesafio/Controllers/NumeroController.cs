@@ -8,7 +8,6 @@ using Microsoft.Extensions.Logging;
 namespace CERTIDesafio.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
     public class NumeroController : ControllerBase
     {
         private readonly ILogger<NumeroController> _logger;
@@ -19,7 +18,10 @@ namespace CERTIDesafio.Controllers
         }
 
         [HttpGet]
-        [Route("{number:int}")]
+        // Rota básica para receber parâmetro do número na URL
+        [Route("{number:int}")] 
+        // Add "Numero/" na URL para manter compatibilidade de versões anteriores
+        [Route("Numero/{number:int}")]
         //**********************************************************************************
         // Comando HTTP GET
         // Recebe número entre -99999 e 99999 e formata para um string por extenso
@@ -32,7 +34,6 @@ namespace CERTIDesafio.Controllers
             return (new Numero(number));
         }
 
-        [HttpGet]
         [Route("-Autoteste")]
         //**********************************************************************************
         // Comando HTTP GET
