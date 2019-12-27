@@ -14,7 +14,7 @@ O número deve estar no intervalo [-99999,99999].
 Digite a URL do servidor passando o número a ser formatado no final da URL, conforme exemplo abaixo:
 
 ```console
-http://localhost:5001/Numero/78
+http://localhost:5001/78
 ```
 Retorna:
 ```console
@@ -37,12 +37,12 @@ Para saber como executar um aplicativo ASP.NET Core em contêineres do Docker us
 
 [ASP.NET Core em contêineres do Docker](https://docs.microsoft.com/pt-br/aspnet/core/host-and-deploy/docker/building-net-docker-images?view=aspnetcore-3.1)
 
-Após rodar o aplicativo abra o navegador e digite o número IP do contêiner, "/Numero/" e o número a ser escrito por extenso. Vide exemplo abaixo:
+Após rodar o aplicativo abra o navegador e digite o número IP do contêiner e o número a ser escrito por extenso. Vide exemplo abaixo:
 
 ```console
-http://172.21.7.1/Numero/78
+http://172.21.7.1/78
 ```
 
 ## Link com o Aplicativo Instalado
 
-[https://certidesafio.azurewebsites.net/Numero/11111](https://certidesafio.azurewebsites.net/Numero/11111)
+[https://certidesafio.azurewebsites.net/11111](https://certidesafio.azurewebsites.net/11111)
