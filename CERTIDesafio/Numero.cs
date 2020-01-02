@@ -60,7 +60,7 @@ namespace CERTIDesafio
                 Decimal *= -1;
             }
 
-            // Calculo dos índices dos vetores
+            // Cálculo dos índices dos vetores
             int milhar = (Decimal / 1000);
             int centena = (Decimal % 1000)/100;
             int dezena = (Decimal % 100) / 10;
@@ -88,27 +88,26 @@ namespace CERTIDesafio
 
             // Formatar centena
             if (centena > 0)// Se está acima de 99
-            {
-                if (Extenso != "" && Extenso != "menos ")// Se já escreveu algum número, concatena o "e"
-                    Extenso += " e ";
-                Extenso += Centenas[centena];
-            }
+                Extenso += ConcatenaE() + Centenas[centena];
 
             // Formatar dezena
             if (dezena > 1)// Se está acima de 19
-            {
-                if (Extenso != "" && Extenso != "menos ")// Se já escreveu algum número, concatena o "e"
-                    Extenso += " e ";
-                Extenso += Dezenas[dezena];
-            }
+                Extenso += ConcatenaE() + Dezenas[dezena];
 
             // Formatar unidade
             if (unidade > 0)// Se não é zero
-            {
-                if(Extenso != "" && Extenso != "menos ")// Se já escreveu algum número, concatena o "e"
-                    Extenso += " e ";
-                Extenso += NumerosBasicos[unidade];
-            }
+                Extenso += ConcatenaE() + NumerosBasicos[unidade];
+        }
+
+        //**********************************************************************************
+        // Testa se deve concatenar letra "e" no contexto atual do número por extenso
+        // Retorna:  string 
+        //           valor " e " ou ""
+        //**********************************************************************************
+        private string ConcatenaE()
+        {
+            // Se já escreveu algum número, retorna " e " senão retorna nada
+            return ((Extenso != "" && Extenso != "menos " ? " e " : ""));
         }
     }
 }
