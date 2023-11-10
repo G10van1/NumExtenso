@@ -1,4 +1,4 @@
-# Desafio CERTI
+# Transforma Número para Extenso
 Este aplicativo é um HTTP Server do tipo WEB API.
 Transforma um número decimal inteiro em um string por extenso.
 O número deve estar no intervalo [-99999,99999].
@@ -26,7 +26,7 @@ O servidor retorna um texto no formato JSON contendo o valor por extenso do núm
 
 Clique no link abaixo para baixar a imagem do aplicativo para rodar no Docker:
 
-[Download Imagem Docker CERTIDesafio](https://1drv.ms/u/s!AqDuCVVT4S07k2cEinuqaL0ajV2H?e=vfHALq)
+[Download Imagem Docker](https://1drv.ms/u/s!AqDuCVVT4S07k2cEinuqaL0ajV2H?e=vfHALq)
 
 Após baixar a imagem abra um prompt de comando e digite o comando abaixo na pasta do arquivo baixado para carregar a imagem.
 ```console
